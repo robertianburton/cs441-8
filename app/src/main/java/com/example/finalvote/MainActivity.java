@@ -1,5 +1,6 @@
 package com.example.finalvote;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -7,7 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements HomeFragment.OnFragmentInteractionListener {
 
     private TextView mTextMessage;
 
@@ -20,8 +21,7 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-
-                    getSupportFragmentManager().beginTransaction().replace(R.id.navigation_home, homeFragment).commit();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment, homeFragment).commit();
                     return true;
                 case R.id.navigation_dashboard:
                     //mTextMessage.setText(R.string.title_dashboard);
@@ -44,4 +44,8 @@ public class MainActivity extends AppCompatActivity {
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
 
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
+    }
 }
