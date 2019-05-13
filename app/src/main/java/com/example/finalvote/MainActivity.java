@@ -8,11 +8,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity implements HomeFragment.OnFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements HomeFragment.OnFragmentInteractionListener, VoteFragment.OnFragmentInteractionListener, CreateFragment.OnFragmentInteractionListener {
 
     private TextView mTextMessage;
 
     HomeFragment homeFragment = new HomeFragment();
+    VoteFragment voteFragment = new VoteFragment();
+    CreateFragment createFragment = new CreateFragment();
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -24,10 +26,10 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment, homeFragment).commit();
                     return true;
                 case R.id.navigation_dashboard:
-                    //mTextMessage.setText(R.string.title_dashboard);
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment, voteFragment).commit();
                     return true;
                 case R.id.navigation_notifications:
-                    //mTextMessage.setText(R.string.title_notifications);
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment, createFragment).commit();
                     return true;
             }
             return false;
