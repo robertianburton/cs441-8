@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">finalvote</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_dashboard">Vote</string>
+    <string name="title_notifications">Create</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment">Home Fragment!</string>
     <string name="hello_create_fragment">Create Fragment!</string>
     <string name="hello_vote_fragment">Vote Fragment!</string>
 </resources>

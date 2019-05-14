@@ -9,7 +9,7 @@
     android:background="#CE8A8A">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <!--<TextView
         android:id="@+id/textView3"
         android:layout_width="0dp"
         android:layout_height="463dp"
@@ -18,6 +18,86 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <ScrollView
+        android:layout_width="366dp"
+        android:layout_height="707dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:scrollbarStyle="insideOverlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="16dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:padding="10dp"
+                android:text="Create a vote!"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+
+            <EditText
+                android:id="@+id/EditVoteName"
+                android:layout_height="wrap_content"
+                android:hint="Vote Name"
+                android:inputType="textPersonName"
+                android:layout_width="fill_parent">
+            </EditText>
+
+            <EditText
+                android:id="@+id/EditTextName1"
+                android:layout_height="wrap_content"
+                android:hint="Option 1"
+                android:inputType="textPersonName"
+                android:layout_width="fill_parent">
+            </EditText>
+
+            <EditText
+                android:id="@+id/EditTextName2"
+                android:layout_height="wrap_content"
+                android:hint="Option 2"
+                android:inputType="textPersonName"
+                android:layout_width="fill_parent">
+            </EditText>
+
+            <EditText
+                android:id="@+id/EditTextName3"
+                android:layout_height="wrap_content"
+                android:hint="Option 3"
+                android:inputType="textPersonName"
+                android:layout_width="fill_parent">
+            </EditText>
+
+            <EditText
+                android:id="@+id/EditTextName4"
+                android:layout_height="wrap_content"
+                android:hint="Option 4"
+                android:inputType="textPersonName"
+                android:layout_width="fill_parent">
+            </EditText>
+
+            <Button
+                android:id="@+id/makaleYazımEsasları"
+                style="@style/AppTheme"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="5dp"
+                android:text="Add An Option"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>
